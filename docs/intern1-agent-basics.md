@@ -1,1 +1,1 @@
-
+Extractor, Validator, Harmonizer, and Logger are four different types of AI agents that have different roles. Extractor agents work to pull out information from various data sources. Validator agents are used to check the accuracy and compliance of data. Harmonizer agents work to consolidate differences in results between agents to ensure data is consistent. Logger agents help to keep track of all the events that take place within the AI system. This allows for it to be traceable.
