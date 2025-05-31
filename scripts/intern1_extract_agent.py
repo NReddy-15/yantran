@@ -37,10 +37,8 @@ print(extracted_inv_num)
 log_text = "Validating file: " + selected_file + "\n"
 
 def validate_response(response: str) -> str:
-    # You could customize this for specific validation goals
     prompt = f"You are a validator agent. Use your tool to ensure that in the following text, the date follows the format '{expected_format}': {response}."
     return llm.complete(prompt).text.strip()
-# f"Evaluate the following string for whether it is a valid date:\n\n{response}\n\nGive a brief critique and end with 'Valid' or 'Invalid'."
 validate_tool = FunctionTool.from_defaults(fn=validate_response)
 
 agent = ReActAgent.from_tools(
@@ -49,7 +47,6 @@ agent = ReActAgent.from_tools(
     verbose=True,
     system_prompt=f"You are a validator agent. Check whether the date follows the format '{expected_format}'."
 )
-# system_prompt="You are a validator agent. Use your tool to evaluate responses for correctness and clarity."
 
 if extracted_date:
     response = f"Is {extracted_date} a valid date in the document and does it match the date format of {expected_format}?"
