@@ -59,16 +59,18 @@ validateAgent = ReActAgent.from_tools(
     tools=[validate_tool],
     llm=llm,
     verbose=True,
-    system_prompt="You are a validator agent. Use your tool to ensure that in the following text, the date follows the expected format."
+    system_prompt="You are a validator agent. Use your tool to check whether in the following text, the fields follow the expected format. In the case of a date format, M represents month, D represents day and Y represents year. Label each field as valid or invalid format."
 )
 
-response = f"Find the invoice number and invoice date in the following text: {text}."
-agent_resp = searchAgent.chat(response)
-print(agent_resp)
-result = str(agent_resp)
-log_text += result + "\n"
+# response = f"Find the invoice number and invoice date in the following text: {text}."
+# agent_resp = searchAgent.chat(response)
+# print(agent_resp)
+# result = str(agent_resp)
+# log_text += result + "\n"
 
-validate_request = f"Check that in the following text, the invoice number follows format {inv_format} and the invoice date follows format {date_format}: {result}."
+result = "The invoice number is: INV-3337 And the invoice date is: January 25, 2016"
+
+validate_request = f"Check that in the following text, the invoice number follows format {inv_format} and the invoice date follows format {date_format}: {result}. Label each field as valid or invalid format."
 valid_resp = validateAgent.chat(validate_request)
 print(valid_resp)
 log_text += str(valid_resp) + "\n\n"

@@ -1,0 +1,11 @@
+Checking field: Date 
+04-05-2006 Valid
+06-09-2013 Valid
+26-Jan-22 Invalid
+19 March, 2021 Invalid
+08-30-2016 Valid
+October 22 2018 Invalid
+Feb-30 Invalid
+30-04-2022 Invalid
+
+

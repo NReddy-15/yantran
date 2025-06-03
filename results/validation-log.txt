@@ -30,6 +30,19 @@ Yes, 05-28-2005 is a valid date in the document and it matches the date format o
 Invoice number found: INV-3337
 
 
-02/06/2025, 17:55:57
+03/06/2025, 12:18:34
 Validating file: wordpress-sample.pdf
-The invoice number is "INV-3337" and the invoice date is "January 25, 2016".
+According to the text, the invoice number follows the format INV-\d+ and the invoice date follows the format MM-DD-YYYY. The details are: Invoice Number: INV-3337, Invoice Date: January 25, 2016.
+
+03/06/2025, 12:24:29
+Validating file: wordpress-sample.pdf
+Yes, according to the provided text, the invoice number follows format INV-\d+ and the invoice date follows format MM-DD-YYYY. The invoice number is indeed "INV-3337" and the invoice date is in the format of "MM-DD-YYYY", which is "01-25-2016".
+
+03/06/2025, 12:28:36
+Validating file: wordpress-sample.pdf
+Yes, the invoice number follows format INV-\d+ and the invoice date follows format MM-DD-YYYY. The invoice number is indeed INV-3337 and the invoice date is January 25, 2016.
+
+03/06/2025, 12:30:17
+Validating file: wordpress-sample.pdf
+The invoice number follows format INV-\d+ (valid) and the invoice date follows format MM-DD-YYYY (invalid).
+
